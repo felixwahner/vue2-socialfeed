@@ -9,6 +9,7 @@ import getters from './getters';
 
 const state = {
     posts : [],
+    errors : []
 }
 
 export default new Vuex.Store({

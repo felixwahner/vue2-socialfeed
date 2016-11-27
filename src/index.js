@@ -3,8 +3,6 @@
 import './assets/styles/main.scss';
 
 import Vue from 'vue';
-import SocialApi from './services/social-api';
-
 import store from './store';
 import NwSocialFeed from './components/nw-social-feed/nw-social-feed.component';
 
@@ -17,9 +15,6 @@ import NwSocialFeed from './components/nw-social-feed/nw-social-feed.component';
 const App = Vue.extend({
     components: {
         NwSocialFeed
-    },
-    mounted: function() {
-        this.$store.dispatch('getPosts');
     },
     store,
     replace: false,

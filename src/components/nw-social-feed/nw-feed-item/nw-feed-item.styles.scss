@@ -1,5 +1,16 @@
 .nw-feed-item {
-
     border-bottom: 1px solid #ccc;
 
+}
+.nw-feed-item-enter,
+.nw-feed-item-leave {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+}
+.nw-feed-item-enter-active,
+.nw-feed-item-leave-active {
+    overflow: hidden;
+    max-height: auto;
+    transition: all 1s ease-out;
 }

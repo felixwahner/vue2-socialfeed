@@ -1,6 +1,10 @@
 <div class="nw-social-feed">
+    <nw-errors></nw-errors>
     <nw-feed-item v-for="itm in posts" :post="itm"></nw-feed-item>
     <div class="nw-social-feed__more">
         <a class="nw-social-feed__external" href="https://www.facebook.com/">Show all</a>
+    </div>
+    <div class="nw-social-feed__reload">
+        <button v-on:click.prevent="getData">Neu laden</button>
     </div>
 </div>
