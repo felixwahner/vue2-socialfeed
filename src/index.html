@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width; initial-scale = 1.0; maximum-scale=1.0; user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="theme-color" content="#9cbf00" />
+  <title>Social-Feed</title>
+
+  <!--[if lt IE 10 ]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexibility/2.0.1/flexibility.js"></script>
+    <script>
+      document.onreadystatechange= function(e) { 
+        flexibility(document.documentElement);
+      }
+    </script>
+  <![endif]-->
+</head>
+<body>
+
+    <noscript>
+      <div class="nope">
+        <p>
+          Please activate Javascript to see the Socialfeed-App
+        </p>
+      </div>
+    </noscript>
+
+    <div id="nw_social_feed_app">
+        <div class="loading">
+            Loading Posts...
+        </div>
+    </div>
+    <script>
+      window.nwSocialFeedDataUrl = './example.json';
+    </script>
+</body>
+</html>
