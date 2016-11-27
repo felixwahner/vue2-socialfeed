@@ -1,6 +1,6 @@
 <div class="nw-feed-item">
     <picture v-if="post.image">
-        <img src="{{ post.image }}" />
+        <img :src="post.image" />
     </picture>
     {{ post.message }}
 </div>
