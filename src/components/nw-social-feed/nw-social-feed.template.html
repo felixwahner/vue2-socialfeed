@@ -2,9 +2,9 @@
     <nw-errors></nw-errors>
     <nw-feed-item v-for="itm in posts" :post="itm"></nw-feed-item>
     <div class="nw-social-feed__more">
-        <a class="nw-social-feed__external" href="https://www.facebook.com/">Show all</a>
+        <a class="nw-social-feed__external" href="https://www.facebook.com/">{{ lng.interface.SHOW_ALL }}</a>
     </div>
     <div class="nw-social-feed__reload">
-        <button v-on:click.prevent="getData">Neu laden</button>
+        <button v-on:click.prevent="getData">{{ lng.interface.RELOAD_FEED }}</button>
     </div>
 </div>

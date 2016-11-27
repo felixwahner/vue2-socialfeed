@@ -7,6 +7,7 @@ import { mapGetters } from 'vuex';
 import SocialApi from '../../services/social-api';
 import NwFeedItem from './nw-feed-item/nw-feed-item.component';
 import NwErrors from './nw-errors/nw-errors.component';
+import lng from '../../config/langconstants';
 
 const socialApi = new SocialApi();
 
@@ -17,6 +18,11 @@ export default {
         NwFeedItem,
         NwErrors
     },
+    data : function() {
+        return {
+            lng : lng
+        }
+    },
     methods: {
         getData: function() {
             socialApi.posts
@@ -25,7 +31,7 @@ export default {
             }).catch(err => {
                 this.$store.dispatch('addError', {
                     type: 'critcial',
-                    message: 'Connection issues: Couldn\'t load post data.'
+                    message: lng.errors.CONNECTION_ISSUES
                 });
             });
         }
