@@ -1,0 +1,9 @@
+@function rem($pixel) {
+	@if not unitless($pixel) {
+		$pixel: strip-units($pixel);
+	}
+	@if not unitless($em-base) {
+		$em-base: strip-units($em-base);
+	}
+	@return ($pixel / $em-base) * 1rem;
+}

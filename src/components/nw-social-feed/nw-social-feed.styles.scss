@@ -1,4 +1,9 @@
+@import 'variables';
+
 .nw-social-feed {
+
+    color: $color_text;
+    font: $font;
 
     &__show-all {
         

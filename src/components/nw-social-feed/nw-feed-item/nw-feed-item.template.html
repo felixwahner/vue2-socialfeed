@@ -1,8 +1,22 @@
 <transition name="nw-feed-item">
-    <div class="nw-feed-item">
-        <picture v-if="post.image">
-            <img :src="post.image" />
+    <article :class="'nw-feed-item nw-feed-item--' + post.type">
+        <header class="nw-feed-item__header">
+            <nw-icon :type="post.type"></nw-icon>
+            <h2 class="nw-feed-item__headline">{{ post.account }}</h2>
+        </header>
+        <picture class="nw-feed-item__picture" v-if="post.image">
+            <img class="nw-feed-item__image" :src="post.image" />
         </picture>
-        {{ post.message }}
-    </div>
+        <div class="nw-feed-item__message">
+            {{ post.message }}
+        </div>
+        <footer class="nw-feed-item__buttons">
+            <a v-bind:href="post.action" class="nw-feed-item__link">
+                <nw-icon :type="'share'"></nw-icon>
+                <time class="nw-feed-item__date" v-bind:datetime="post.date">
+                    at {{ post.date }}
+                </time>
+            </a>
+        </footer>
+    </article>
 </transition>

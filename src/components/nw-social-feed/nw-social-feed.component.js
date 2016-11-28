@@ -6,7 +6,6 @@ import { mapGetters } from 'vuex';
 
 import SocialApi from '../../services/social-api';
 import NwFeedItem from './nw-feed-item/nw-feed-item.component';
-import NwErrors from './nw-errors/nw-errors.component';
 import lng from '../../config/langconstants';
 
 const socialApi = new SocialApi();
@@ -15,8 +14,7 @@ export default {
     name: 'nw-social-feed',
     template,
     components: {
-        NwFeedItem,
-        NwErrors
+        NwFeedItem
     },
     data : function() {
         return {

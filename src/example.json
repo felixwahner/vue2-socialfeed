@@ -6,7 +6,7 @@
     "account": "SomeSocialMediaAccount",
     "type": "facebook",
     "action": "http://www.facebook.com",
-    "image": "http://placekitten.com/500/500"
+    "image": "https://www.fillmurray.com/g/600/250"
   },
   {
     "sm_id": "583acd50e6f1e0cdf6d78dbf",
@@ -15,7 +15,7 @@
     "account": "SomeSocialMediaAccount",
     "type": "facebook",
     "action": "http://www.facebook.com",
-    "image": "http://placekitten.com/500/500"
+    "image": "https://www.fillmurray.com/g/600/250"
   },
   {
     "sm_id": "583acd50a8cc5e6f30461974",
@@ -24,7 +24,7 @@
     "account": "SomeSocialMediaAccount",
     "type": "facebook",
     "action": "http://www.facebook.com",
-    "image": "http://placekitten.com/500/500"
+    "image": "https://www.fillmurray.com/g/600/250"
   },
   {
     "sm_id": "583acd50ede5a281c03d777e",
@@ -33,7 +33,7 @@
     "account": "SomeSocialMediaAccount",
     "type": "facebook",
     "action": "http://www.facebook.com",
-    "image": "http://placekitten.com/500/500"
+    "image": "https://www.fillmurray.com/g/600/250"
   },
   {
     "sm_id": "583acd5053d4a4252d46cfff",
@@ -42,7 +42,7 @@
     "account": "SomeSocialMediaAccount",
     "type": "facebook",
     "action": "http://www.facebook.com",
-    "image": "http://placekitten.com/500/500"
+    "image": "https://www.fillmurray.com/g/600/250"
   },
   {
     "sm_id": "583acd506a4cd1c4a120b3e2",
@@ -51,6 +51,6 @@
     "account": "SomeSocialMediaAccount",
     "type": "facebook",
     "action": "http://www.facebook.com",
-    "image": "http://placekitten.com/500/500"
+    "image": "https://www.fillmurray.com/g/600/250"
   }
 ]

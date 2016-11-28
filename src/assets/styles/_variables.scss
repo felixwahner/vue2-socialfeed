@@ -1,0 +1,9 @@
+@import 'functions';
+
+$em-base: 18 !default;
+$base-unit: 18 !default;
+$font: normal normal rem($em-base) Arial, Helvetica, sans-serif;
+$color_bg: #edf0f4 !default;
+$color_border: rgba(34,36,38,.1) !default;
+$color_text: #6a7071 !default;
+$font_size: rem(18) !default;

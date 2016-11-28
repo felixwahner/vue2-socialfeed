@@ -13,6 +13,9 @@ content in a "feed" that can be embedded anywhere in your application.
 - VueX
 - Axios
 
+## Installing
+Either use the prebuilt files in `dist` or `git pull` this repo and use `npm run dev` for local development or `npm run build` for building. 
+
 ## Prequisites
 If you want to adjust things to you need you'll have to have the following tools installed:
 

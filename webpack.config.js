@@ -40,10 +40,12 @@ var webpackConfig = {
                 test: /\.html$/,
                 loader: 'html'
             }, {
-                test   : /\.svg/,
-                loader : 'file?name=../images/[name].[ext]&encoding=bas64',
-                exclude: ['/node_modules/']
-	    }]
+                test: /\.svg$/,
+                loader: 'svg-sprite?' + JSON.stringify({
+                    name: '[name]_[hash]',
+                    prefixize: true
+                })
+            }]
     },
     postcss: function () {
         return [

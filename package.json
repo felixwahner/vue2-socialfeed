@@ -4,7 +4,7 @@
   "description": "Eine einfache Anzeige von Daten aus einem Social-Feed",
   "main": "dist/nw_socialfeed.js",
   "scripts": {
-    "cptask": "rm -rf ./dist && mkdir dist && cp src/example.json dist/example.json",    
+    "cptask": "rm -rf ./dist && mkdir dist && cp src/example.json dist/example.json",
     "build": "npm run cptask && cross-env NODE_ENV=production webpack --config webpack.config.js -p --colors",
     "dev": "npm run cptask && cross-env NODE_ENV=development webpack-dashboard -- webpack-dev-server --hot --watch --colors --config webpack.config.js",
     "start": "npm run dev"

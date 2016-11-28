@@ -1,6 +1,39 @@
-.nw-feed-item {
-    border-bottom: 1px solid #ccc;
+@import 'variables';
 
+.nw-feed-item {
+    border-bottom: 1px solid $color_border;
+    background: $color_bg;
+    margin: rem($base-unit);
+    &__header {
+        padding: rem($base-unit/2) rem($base-unit);
+        background: white;
+        border: 1px solid $color_border;
+        display: flex;
+        align-items: center;
+    }
+    &__headline {
+        font-size: rem($em-base);
+        font-weight: normal;
+        margin-left: rem(10);
+    }
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+    &__message {
+        padding: rem($base-unit);
+    }
+    &__buttons {
+        display: flex;
+        padding: 0 rem($base-unit) rem($base-unit);
+        align-items: center;
+    }
+    &__link {
+        background: white;
+        color: $color_text;
+        padding: rem($base-unit/2);
+        border-radius: rem($base-unit/2);
+    }
 }
 .nw-feed-item-enter,
 .nw-feed-item-leave {
