@@ -1,7 +1,14 @@
 <div class="nw-social-feed">
     <nw-errors></nw-errors>
-    <div class="nw-social-feed__reload">
-        <button v-on:click.prevent="getData">{{ lng.interface.RELOAD_FEED }}</button>
-    </div>
-    <nw-feed-item v-for="itm in posts" :post="itm"></nw-feed-item>
+    <pagination 
+        for="nw-feed-item" 
+        :records="allRecordsNum" 
+        :per-page="perpage"></pagination>
+    <nw-feed-item 
+        v-for="itm in currentPagePosts" 
+        :post="itm"></nw-feed-item>
+    <pagination 
+        for="nw-feed-item" 
+        :records="allRecordsNum" 
+        :per-page="perpage"></pagination>
 </div>

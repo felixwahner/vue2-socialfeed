@@ -10,3 +10,38 @@
     }
 
 }
+.VuePagination__pagination {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 1rem;
+    li {
+        flex-grow: 1;
+        background: $color_bg;
+        margin-right: 1%;
+        text-align: center;
+        padding: 3px;
+        
+        &.disabled {
+            background: #fff;
+            color: #ccc;
+        }
+        &.active {
+            background: #fff;
+            border: 1px solid $color_bg;
+        }
+        &:first-child,
+        &:last-child {
+            display: none;
+        }
+        a {
+            text-decoration: none;
+            color: $color_link;
+        }
+    }
+}
+.VuePagination__count {
+    display: none;
+}

@@ -18,7 +18,8 @@ export default {
     },
     data : function() {
         return {
-            lng : lng
+            lng : lng,
+            perpage : 5
         }
     },
     methods: {
@@ -39,7 +40,16 @@ export default {
     },
     computed : {
         ...mapGetters([
-            'posts'
-        ])
+            'posts',
+            'currentPage'
+        ]),
+        currentPagePosts : function() {
+            let allPosts = this.posts.slice(0),
+                start = this.perpage*(this.currentPage-1);
+            return allPosts.slice(start, (start+this.perpage >= this.posts.length ? this.posts.length : (start+this.perpage)));
+        },
+        allRecordsNum : function() {
+            return this.posts.length || 0;
+        },
     }
 };	

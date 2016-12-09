@@ -28,24 +28,26 @@ var webpackConfig = {
     },
     module: {
         loaders: [{
-                test: /\.js$/,
-                exclude: /(node_modules)/,
-                loader: 'babel',
-                query: {  presets: ['es2015', 'stage-0'] }
-            }, {
                 test: /\.json$/,
                 loader: 'json',
                 exclude: [/manifest.json$/]
             },{ 
                 test: /\.html$/,
                 loader: 'html'
+            },
+            {
+                test: /jsx$/,
+                loader: 'babel',
+            },{
+                test: /\.js$/,
+                loader: 'babel'
             }, {
-                test: /\.svg$/,
-                loader: 'svg-sprite?' + JSON.stringify({
-                    name: '[name]_[hash]',
-                    prefixize: true
-                })
-            }]
+            test: /\.svg$/,
+            loader: 'svg-sprite?' + JSON.stringify({
+                name: '[name]_[hash]',
+                prefixize: true
+            })
+        }]
     },
     postcss: function () {
         return [
@@ -113,11 +115,10 @@ if(process.env.NODE_ENV.indexOf('development') > -1 ) {
     console.log("+++ USING PRODUCTION CONFIG +++" + process.env.NODE_ENV );
 
     webpackConfig.plugins.push(new Webpack.optimize.DedupePlugin());
-    webpackConfig.plugins.push(ExtractSASS);
-
+    
     webpackConfig.module.loaders.push({
-        test   : /\.scss$/,
-        loader : ExtractSASS.extract('style-loader', 'css!postcss!sass-loader?includePaths[]=' + Path.resolve(__dirname, './src/assets/styles')),
+        test: /\.scss$/i,
+        loader: 'style!css!postcss!sass-loader?includePaths[]=' + Path.resolve(__dirname, './src/assets/styles'),
         exclude: ['/node_modules/']
     });
     webpackConfig.module.loaders.push( { 

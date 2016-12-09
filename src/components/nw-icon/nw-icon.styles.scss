@@ -1,15 +1,14 @@
 @import 'variables';
 
 .nw-icon {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: transparent;
-    height: rem(30);
-    width: rem(30);
+    display: inline-block;
+    height: rem(24);
+    width: rem(24);
+    line-height: 1;
+    margin-right: rem(10);
+    position: relative;
+    top: rem(6);
     text-align: center;
-    border-radius: 50%;
-    background: $color_bg;
     path, circle {
         fill: $color_text;
     }

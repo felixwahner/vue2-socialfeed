@@ -14,7 +14,7 @@ const createId = function(state) {
         id = tmpId;
     }
     return id;
-}
+};
 
 export default {
 
